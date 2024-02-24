@@ -1,9 +1,27 @@
 <?php
 
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 
+//View dalam direktori 
+Route::get('/greeting', function(){
+    return view('blog.hello', ['name' => 'Galihwahyu']);
+});
+//View
+//Route::get('/greeting', function(){
+    //return view('hello', ['name' => 'Galihwahyu']);
+//});
 
+//Controller
+//Route::get('article/{articleId}',[PageController::class,'articles']);
+//Route::get('about',[PageController::class,'about']);
+//Route::get('index',[PageController::class,'index']);
+
+
+
+//Route::get('hello',[WelcomeController::class,'hello']);
 
 //--OPTIONAL PARAMATERS--
 //Route::get('/user/{name?}', function ($name='Jony'){
